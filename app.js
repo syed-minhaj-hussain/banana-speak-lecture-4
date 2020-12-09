@@ -17,7 +17,7 @@ function getValue() {
     fetch(concatinateUrl(input))
     .then(response => response.json())
     .then(json => {
-        box.innerText = jaon.contents.translated;
+        box.innerText = json.contents.translated;
     })
     .catch(error => alert(error))
 }
