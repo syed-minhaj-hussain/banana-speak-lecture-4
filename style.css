@@ -5,7 +5,7 @@ body {
     font-family: 'Architects Daughter', cursive;
 }
 .main {
-    background-image: url("/justin-lim-tloFnD-7EpI-unsplash\ \(1\).jpg");
+    background-image: url("/images/justin-lim-tloFnD-7EpI-unsplash\ \(1\).jpg");
     height: 85.5vh;
     width: 100%;
     background-position: center center;
@@ -62,5 +62,5 @@ p {
     display: inline-block;
 }
 .mid {
-    margin-left: 3rem;
+    margin-left: 2.2rem;
 }
