@@ -35,16 +35,46 @@ Live Exercise
 
 /*
     // Exercise-5
-var btn = document.querySelector('#btn');
-var textArea = document.querySelector('#text-area');
-var div = document.querySelector('.box');
-  console.log(div);
+    var btn = document.querySelector('#btn');
+    var textArea = document.querySelector('#text-area');
+    var div = document.querySelector('.box');
+    console.log(div);
+    
+    function printInDiv() {
+        div.innerText = takeTextAreaValue;
+        //   console.log(div.innerText);
+    }
+    //   onclick
+    btn.addEventListener('click', printInDiv);
+    */
+   // Ex-6,7,8 done
+   
+   // Ex-9
+   var btn = document.querySelector('#btn');
+   var textArea = document.querySelector('#text-area');
+   var div = document.querySelector('.box');
+//    var takeTextAreaValue = textArea.value;
 
-  function printInDiv() {
-      var takeTextAreaValue = textArea.value;
-      div.innerText = takeTextAreaValue;
-    //   console.log(div.innerText);
-  }
-//   onclick
-btn.addEventListener('click', printInDiv);
-*/
+   var url = "https:api.funtranslations.com/translate/minion.json";
+
+    function getTranslationUrl(text) {
+      return  url + "?" + "text=" + text;
+    }
+
+   function clickEventHandler() {
+       var inputFromTextArea = textArea.value;
+       fetch(getTranslationUrl(inputFromTextArea))
+       .then( response => response.json())
+    //    .then( json => console.log(json) )
+       .then( json => {
+        div.innerText = json.contents.translated;
+        } )
+       .catch( error => {
+        console.log('Error occurred:', error);
+        console.log('try after sme time');
+    })
+    div.innerText = textArea.value;
+   }
+
+   
+   btn.addEventListener('click', clickEventHandler)
