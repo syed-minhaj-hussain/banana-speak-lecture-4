@@ -7,7 +7,7 @@ var box = document.querySelector('.box');
 var minionUrl = "https://api.funtranslations.com/translate/minion.json";
 
 // function for concatination
-function concatinateUrl() {
+function concatinateUrl(text) {
     return minionUrl + "?" + "text=" + text;
 }
 
