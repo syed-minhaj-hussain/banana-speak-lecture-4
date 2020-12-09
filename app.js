@@ -16,7 +16,10 @@ function getValue() {
     var input = textArea.value;
     fetch(concatinateUrl(input))
     .then(response => response.json())
-    .then(json => console.log(json))
+    .then(json => {
+        box.innerText = jaon.contents.translated;
+    })
+    .catch(error => alert(error))
 }
 
-btn.addEventListener('click', getValue)
+btn.addEventListener('click', getValue);
