@@ -16,7 +16,7 @@
        var inputFromTextArea = textArea.value;
        fetch(getTranslationUrl(inputFromTextArea))
        .then( response => response.json())
-       .then( json => (div.innerText = json.contents.translated) )
+       .then( json => console.log(json) )
        .catch( error => {
         alert(error + " try after some time")
     })
