@@ -1,6 +1,4 @@
-
-   
-   // Ex-9
+// Ex-9
    var btn = document.querySelector('#btn');
    var textArea = document.querySelector('#text-area');
    var div = document.querySelector('.box');
@@ -23,7 +21,6 @@
     div.innerText = textArea.value;
    }
 
-   
    btn.addEventListener('click', clickEventHandler);
 
 
