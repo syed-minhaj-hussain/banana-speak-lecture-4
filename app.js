@@ -70,8 +70,9 @@ Live Exercise
         div.innerText = json.contents.translated;
         } )
        .catch( error => {
+        alert(error + " try after some time");
         console.log('Error occurred:', error);
-        console.log('try after sme time');
+        console.log('try after some time');
     })
     div.innerText = textArea.value;
    }
