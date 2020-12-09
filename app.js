@@ -11,8 +11,8 @@
     }
 
    function clickEventHandler() {
-       var inputFromTextArea = textArea.value;
-       fetch(getTranslationUrl(String(inputFromTextArea)))
+    //    var inputFromTextArea = textArea.value;
+       fetch(getTranslationUrl(textArea.value))
        .then( response => response.json())
        .then( json => console.log(json) )
        .catch( error => {
