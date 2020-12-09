@@ -1,4 +1,44 @@
-/*  // exercise-3
+
+   
+   // Ex-9
+   var btn = document.querySelector('#btn');
+   var textArea = document.querySelector('#text-area');
+   var div = document.querySelector('.box');
+//    var takeTextAreaValue = textArea.value;
+
+   var url = "https:api.funtranslations.com/translate/minion.json";
+
+    function getTranslationUrl(text) {
+      return  url + "?" + "text=" + text;
+    }
+
+   function clickEventHandler() {
+       var inputFromTextArea = textArea.value;
+       fetch(getTranslationUrl(inputFromTextArea))
+       .then( response => response.json())
+       .then( json => {
+        div.innerText = json.contents.translated;
+        } )
+       .catch( error => {
+        alert(error + " try after some time");
+        console.log('Error occurred:', error);
+        console.log('try after some time');
+    })
+    div.innerText = textArea.value;
+   }
+
+   
+   btn.addEventListener('click', clickEventHandler);
+
+
+
+
+
+
+
+
+
+   /*  // exercise-3
 var btn = document.querySelector('#btn');
 console.log(btn);
 
@@ -48,34 +88,3 @@ Live Exercise
     btn.addEventListener('click', printInDiv);
     */
    // Ex-6,7,8 done
-   
-   // Ex-9
-   var btn = document.querySelector('#btn');
-   var textArea = document.querySelector('#text-area');
-   var div = document.querySelector('.box');
-//    var takeTextAreaValue = textArea.value;
-
-   var url = "https:api.funtranslations.com/translate/minion.json";
-
-    function getTranslationUrl(text) {
-      return  url + "?" + "text=" + text;
-    }
-
-   function clickEventHandler() {
-       var inputFromTextArea = textArea.value;
-       fetch(getTranslationUrl(inputFromTextArea))
-       .then( response => response.json())
-    //    .then( json => console.log(json) )
-       .then( json => {
-        div.innerText = json.contents.translated;
-        } )
-       .catch( error => {
-        alert(error + " try after some time");
-        console.log('Error occurred:', error);
-        console.log('try after some time');
-    })
-    div.innerText = textArea.value;
-   }
-
-   
-   btn.addEventListener('click', clickEventHandler)
