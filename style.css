@@ -4,23 +4,32 @@ body {
     padding: 0;
     font-family: 'Architects Daughter', cursive;
 }
+.main {
+    background-image: url("/justin-lim-tloFnD-7EpI-unsplash\ \(1\).jpg");
+    height: 85.5vh;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+
+}
 h1 {
     text-align: center;
     background-color: #F2C94C;
-    margin-top: 0;
+    margin: 0;
     padding: 1rem 0;
 
 }
 .container-center {
     max-width: 600px;
     margin: auto;
+    padding: 1rem;
 }
 #text-area {
     width: 70%;
     margin: auto;
     display: block;
     margin-bottom: 1rem;
-    height: 7rem;
+    height: 6rem;
     font-family: 'Architects Daughter', cursive;
     font-size: large;
     padding: 1rem;
@@ -28,22 +37,29 @@ h1 {
 .box {
     width: 70%;
     margin: auto;
-    height: 7rem;
+    height: 6rem;
     border: 1px solid black;
     margin-top: 1rem;
     font-family:'Architects Daughter', cursive;
     font-size: large;
     padding: 1rem;
+    background-color: #fff;
+    color: black;
 }
 #btn {
-    background-color:  #F2C94C;
+    background-color:  #fff;
     border : none;
-    padding: 0.8rem 1.25rem;
+    padding: 0.5rem 0.8rem;
     font-family: 'Architects Daughter', cursive;
     font-size: larger;
+    display: block;
 }
 p {
-    font-size: 1.22rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    color: #333;
+    display: inline-block;
 }
 .mid {
     margin-left: 3rem;
